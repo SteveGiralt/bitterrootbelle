@@ -7,3 +7,7 @@
 footer {
   color: #ea1c2c;
 }
+
+.navbar-toggler {
+  color: #ea1c2c !important;
+}
