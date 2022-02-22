@@ -56,6 +56,36 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/safari-pinned-tab.svg"
+      color="#ea1c2c"
+    />
+    <meta name="msapplication-TileColor" content="#b91d47" />
+    <meta name="theme-color" content="#ea1c2c" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="app.css" />
@@ -71,6 +101,15 @@
               class="card-img-top logo"
               alt="Bitterroot Belle Logo"
             />
+          </div>
+        </div>
+        <div class="col-12 mb-2">
+          <div class="text-center">
+            <h2>
+              <a href="https://bitterrootbelle.com/store" class="store-link">
+                Visit My Online Store <i class="bi bi-cart4"></i
+              ></a>
+            </h2>
           </div>
         </div>
       </div>
@@ -277,11 +316,47 @@
       </div>
     </footer>
 
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header store-link">
+          <strong class="me-auto">Now Open <i class="bi bi-cart4"></i></strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            data-bs-delay="10000"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          <a href="https://bitterrootbelle.com/store" class="store-link">
+            The Bitterroot Belle Store Is Open!</a
+          >
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      window.addEventListener("load", () => {
+        var toastLive = document.getElementById("liveToast");
+
+        var toast = new bootstrap.Toast(toastLive);
+
+        toast.show();
+      });
+    </script>
   </body>
 </html>

@@ -84,6 +84,12 @@ footer {
   color: #ea1c2c;
 }
 
+.store-link,
+.store-link:any-link {
+  color: #ea1c2c;
+  text-decoration: none;
+}
+
 @media (max-width: 1200px) {
   #headingGroup h1 {
     font-size: 3rem;
